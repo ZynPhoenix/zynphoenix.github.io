@@ -1,0 +1,161 @@
+body
+{
+    background: #f3bfbf;
+}
+.container
+{
+    width:100vw;
+    max-width: 1650px;
+}
+.song {
+    display: flex;
+    width: 100%;
+    padding-top: 30px;
+    align-items: center;
+    justify-content: center;
+}
+h1{
+    font-family: "Patrick Hand", serif;
+    font-size: 80px;
+    color:#d14545;
+    text-align: center;
+    animation-duration: 1s;
+    animation-name: beat;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+@keyframes beat{
+    0%{
+        scale: 100%;
+    }
+    50%{
+        scale: 120%;
+    }
+    100%{
+        scale:100%;
+    }
+}
+.play{
+    font-family: 'Century Gothic', sans-serif;
+    color: #ffffff;
+    text-align: center;
+    font-size: 20px;
+}
+audio{
+    width: 50%;
+    border: 2px solid white;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 150ms ease;
+}
+audio:hover{
+    scale: 130%;
+}
+audio::-webkit-media-controls-panel{
+    border:none;
+    background-color: #f3bfbf;
+}
+audio::-webkit-media-controls-time-remaining-display,
+audio::-webkit-media-controls-current-time-display{
+    color: #eb5353;
+    font-size: 25px;
+    font-family:'Century Gothic', sans-serif;
+    font-weight:600;
+}
+audio::-webkit-media-controls-play-button{
+    color: #f7ebeb;
+}
+
+.vers_1,.vers_2 {
+    text-align: center;
+    font-family: "Patrick Hand", serif;
+    font-size: 35px;
+    color:#d14545;
+}
+.vers_1:hover,.vers_2:hover,.ch_lyrics:hover,.kn_lyrics:hover,.jp_lyrics:hover,.it_lyrics:hover,.ph_lyrics:hover{
+    color:#ffffff;
+    text-shadow: 2px 2px 2px #cc2121;
+    scale: 120%;
+    text-align: center;
+}
+
+.ph_lyrics,
+.jp_lyrics,.it_lyrics{
+    font-family: "Fuzzy Bubbles", serif;
+    font-size: 40px;
+    color:#d14545;
+    text-align:left;
+}
+.jp_translate,.it_translate{
+    font-family: "Century Gothic", serif;
+    font-size: 35px;
+    color:#d14545;
+    text-align:left;
+}
+.ph_image,.jp_image,.it_image{
+    width: 300px;
+    padding-right: 70%;
+    animation: infinite dance 1s ease-in-out ;
+}
+.kn_lyrics,.ch_lyrics{
+    font-family: "Fuzzy Bubbles", serif;
+    font-size: 50px;
+    color:#d14545;
+    text-align:right;
+}
+.kn_translate,.ch_translate{
+    font-family: "Century Gothic", serif;
+    font-size: 35px;
+    color:#d14545;
+    text-align:right;
+}
+.kn_image,.ch_image{
+    width: 300px;
+    padding-left: 70%;
+    animation: infinite dance2 1s ease-in-out ;
+}
+.us_image{
+    width: 300px;
+    padding-left:40%;
+    animation: infinite dance3 1s ease-in-out ;
+}
+@keyframes dance{
+    0%{
+        transform: translateX(0px) rotate(0deg);
+        transform-origin: bottom left;
+    }
+    50%{
+        transform: translateX(25px) rotate(5deg);
+        transform-origin: bottom left;
+    }100%{
+        transform: translateX(0px) rotate(0deg);
+        transform-origin: bottom left;
+    }
+}
+
+@keyframes dance2{
+    0%{
+        transform: translateX(0px) rotate(0deg);
+        transform-origin: bottom right;
+    }
+    50%{
+        transform: translateX(25px) rotate(5deg);
+        transform-origin: bottom right;
+    }100%{
+        transform: translateX(0px) rotate(0deg);
+        transform-origin: bottom    right;
+    }
+}
+@keyframes dance3{
+    0%{
+        transform: translateX(0px) rotate(0deg);
+        transform-origin: bottom;
+    }
+    50%{
+        transform: translateX(25px) rotate(5deg);
+        transform-origin: bottom;
+    }100%{
+        transform: translateX(0px) rotate(0deg);
+        transform-origin: bottom center ;
+    }
+}
