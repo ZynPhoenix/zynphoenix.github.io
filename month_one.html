@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="galaxy.css">
+</head>
+<body>
+
+<div class="front">
+  <img src="scroll.png" alt="scroll">
+  <div class="text-container">
+    <p id="typing" class="message"></p>
+    <div id="input-container" style="display:none; margin-top:10px;">
+      <input type="text" id="userInput" placeholder="Answer here">
+      <br><br><button onclick="checkWord()">Submit</button>
+      <p id="feedback" style="color:rgb(13, 76, 5); margin-top:5px;"></p>
+    </div>
+  </div>
+</div>
+
+
+<div class="space stars1"></div>
+<div class="space stars2"></div>
+<div class="space stars3"></div>
+
+<script src="typing.js"></script>
+<script src="game.js"></script>
+</body>
+</html>
